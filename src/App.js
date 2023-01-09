@@ -76,7 +76,6 @@ export default function App() {
     <div className="App">
       <h1> 🎥 TV Series 🍿</h1>
       <p style={{ fontSize: "smaller" }}>
-        {" "}
         Checkout my favorite TV Series. Select a genre to get started{" "}
       </p>
 
@@ -90,15 +89,12 @@ export default function App() {
         <ul style={{ paddingInlineStart: "0" }}>
           {tvSeriesDB[selectedGenre].map((tvSeries) => (
             <li key={tvSeries.name}>
-              {" "}
-              <div style={{ fontSize: "larger" }}> {tvSeries.name} </div>
+              <div style={{ fontSize: "larger", fontWeight: "bold" }}> {tvSeries.name} </div>
               <div style={{ fontSize: "smaller" }}>
-                {" "}
                 {tvSeries.description}{" "}
               </div>
               <div style={{ fontSize: "smaller", fontWeight: "bold" }}>
-                {" "}
-                {tvSeries.rating}{" "}
+                {tvSeries.rating}
               </div>
             </li>
           ))}
