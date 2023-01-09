@@ -5,8 +5,12 @@
 }
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: Verdana, Arial, Tahoma, Serif;
     background-image: linear-gradient(to right, #decba4, #3e5151);
+}
+
+p {
+    font-size: smaller;
 }
 
 button {
@@ -23,4 +27,22 @@ li {
     width: 90%;
     margin: 1rem 0rem;
     border-radius: 0.5rem;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+.title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.description {
+    font-size: smaller;
+}
+
+.rating {
+    font-size: smaller;
+    font-weight: bold;
 }

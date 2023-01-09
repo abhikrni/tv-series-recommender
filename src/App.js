@@ -68,16 +68,16 @@ const tvSeriesDB = {
 };
 
 export default function App() {
-  const [selectedGenre, setGenre] = useState("business");
+  const [selectedGenre, setGenre] = useState("comedy");
+
   function genreClickHandler(genre) {
     setGenre(genre);
   }
+
   return (
     <div className="App">
       <h1> 🎥 TV Series 🍿</h1>
-      <p style={{ fontSize: "smaller" }}>
-        Checkout my favorite TV Series. Select a genre to get started{" "}
-      </p>
+      <p>Checkout my favorite TV Series. Select a genre to get started</p>
 
       <div>
         {Object.keys(tvSeriesDB).map((genre) => (
@@ -86,16 +86,12 @@ export default function App() {
       </div>
       <hr />
       <div style={{ textAlign: "left" }}>
-        <ul style={{ paddingInlineStart: "0" }}>
+        <ul>
           {tvSeriesDB[selectedGenre].map((tvSeries) => (
             <li key={tvSeries.name}>
-              <div style={{ fontSize: "larger", fontWeight: "bold" }}> {tvSeries.name} </div>
-              <div style={{ fontSize: "smaller" }}>
-                {tvSeries.description}{" "}
-              </div>
-              <div style={{ fontSize: "smaller", fontWeight: "bold" }}>
-                {tvSeries.rating}
-              </div>
+              <div className="title">{tvSeries.name}</div>
+              <div className="description">{tvSeries.description}</div>
+              <div className="rating"> {tvSeries.rating}</div>
             </li>
           ))}
         </ul>
