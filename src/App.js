@@ -85,7 +85,7 @@ export default function App() {
         ))}
       </div>
       <hr />
-      <div style={{ textAlign: "left" }}>
+      <div>
         <ul>
           {tvSeriesDB[selectedGenre].map((tvSeries) => (
             <li key={tvSeries.name}>
